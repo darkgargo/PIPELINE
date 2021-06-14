@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>Python Deploy Test</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <!-- 네비게이션 바 시작 -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Python Deploy Test</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <!-- 네비게이션 바 끝 -->
+
+  <!-- 점보트론 시작 -->
+  <div class="container">
+    <div class="jumbotron">
+      <h1>
+        <span style="color:black">Python WebApp Test For Sign-In</span>
+      </h1>
+      <p>
+        <span style="color:black">Sign-IN Page</span>
+      </p>
+    </div>
+  </div>
+  <br>
+  <!-- 점보트론 끝 -->
+
+
+  <!-- 메인 필드 시작-->
+  <form action="\Sign-Up" method="post" class="input-form" id="id_list_html">
+    <br>
+    Welcome {{id}} 
+    <br>
+    Your PW {{pw}}
+    <br>
+    Customer list {% for i in all_id_list %} <p>{{i}}</p> {% endfor %}
+    <br>
+    <br>
+  </form>
+  </form>
+      <br>
+  <!-- 메인 필드 끝-->
+
+  <script>
+    var a=document.getElementById('id_list_html').innerText;
+    console.log(a);
+  </script>
+
+</body>
+
+</html>

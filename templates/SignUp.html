@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>Python Deploy Test</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <!-- 네비게이션 바 시작 -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Python Deploy Test</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <!-- 네비게이션 바 끝 -->
+
+
+
+  <!-- 점보트론 시작 -->
+  <div class="container">
+    <div class="jumbotron">
+      <h1>
+        <span style="color:black">Python WebApp Test For Sign-Up</span>
+      </h1>
+      <p>
+        <span style="color:black">SIGN UP DevOps TEST PLEASE</span>
+      </p>
+    </div>
+  </div>
+  <br>
+  <!-- 점보트론 끝 -->
+
+  
+  <!-- 회원가입 필드 시작-->
+  <form action="\Sign-Up" method="post" class="input-form">
+    ID : <input type ="text" name='id_name', id="hello_id" class="input-id">
+    <input type="button" onclick="checkid()" class="id_check" value="중복확인"> 
+    <br>
+    <br>
+    PW : <input type="password" name='pw_name' class="input-password">
+    <br>
+    <br>
+    Name : <input type="text" name='name_name' class="input-name">
+    <br>
+    <br>
+    <input type="submit" value="submit" class="input-btn"> 
+  </form>
+  <p class="asd" style="display:none;"> {% for i in id_list %} {{i}} {% endfor %}</p>
+
+  <form action="\Move" method="post">
+    <button type="button" onclick="location.href='Move'">로그인 페이지</button>
+  </form>
+      <br>
+  <!-- 회원가입 필드 끝-->
+
+  <script>
+    var b=$('.asd').text()
+    var id_list=b.split(' ')
+    var haha=new Set(id_list)
+    var hoho=[...haha]
+    hoho.shift()
+    var count=0;
+
+    function checkid(){
+      var ckid=$('#hello_id').val()
+      console.log(ckid)
+      for(var i=0; i<=hoho.length; i++){
+        if(ckid==hoho[i]){
+          count=count+1
+        }
+      }
+      if(count>=1){
+        alert("ID중복 다시확인해주세요")
+        count=0
+        return 0
+      }
+      else{
+        alert("ID 사용 가능")
+        return 0
+      }
+
+
+    }
+    
+  </script>
+
+</body>
+
+</html>
